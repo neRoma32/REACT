@@ -8,11 +8,13 @@ App
     │     ↑ onAddTodo(newTask)
     │
     └── TodoItem (state: isCompleted, props: task, onDelete)
-          │   [Checkbox] → toggle completed (local state)
-          │   [Delete Button] ↑ onDelete(id)
+          │
+          ├── [Checkbox] → toggle completed (local state)
+          │
+          └── [Delete Button] ↑ onDelete(id)
 
 ## State colocation
-`TodoList` зберігає список завдань (`[todos]`).
+`TodoList` зберігає список завдань (`[todos]`).  
 `TodoItem` зберігає власний стан `isCompleted`.
 
 ## Acceptance Criteria

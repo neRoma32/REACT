@@ -3,13 +3,13 @@
 App
 │
 └── TodoList (state: [todos])
-      │
-      ├── AddTodoForm
-      │     ↑ onAddTodo(newTask)
-      │
-      └── TodoItem (state: isCompleted, props: task, onDelete)
-            │   [Checkbox] → toggle completed (local state)
-            │   [Delete Button] ↑ onDelete(id)
+│
+├── AddTodoForm
+│ ↑ onAddTodo(newTask)
+│
+└── TodoItem (state: isCompleted, props: task, onDelete)
+│ [Checkbox] → toggle completed (local state)
+│ [Delete Button] ↑ onDelete(id)
 
 ## State colocation
 `TodoList` зберігає список завдань (`[todos]`).

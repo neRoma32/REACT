@@ -1,7 +1,5 @@
 ## Архітектура
 
-# Архітектура
-
 ```text
 App
 │
@@ -15,7 +13,7 @@ App
           ├── [Checkbox] → toggle completed (local state)
           │
           └── [Delete Button] ↑ onDelete(id)
-          
+
 ## State colocation
 `TodoList` зберігає список завдань (`[todos]`).  
 `TodoItem` зберігає власний стан `isCompleted`.

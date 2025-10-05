@@ -1,18 +1,12 @@
-import { useState } from "react";
 import AddTodoForm from "./AddTodoForm";
 import TodoItem from "./TodoItem";
+import { useTodos } from "../hooks/useTodos";
 
 function TodoList() {
-  const [todos, setTodos] = useState([]);
+  const { todos, isLoading, error, addTodo, deleteTodo, toggleTodo } = useTodos();
 
-  const addTodo = (task) => {
-    if (!task.trim()) return;
-    setTodos([...todos, { id: Date.now(), text: task }]);
-  };
-
-  const deleteTodo = (id) => {
-    setTodos(todos.filter((todo) => todo.id !== id));
-  };
+  if (isLoading) return <p>Loading...</p>;
+  if (error) return <p style={{ color: "red" }}>{error}</p>;
 
   return (
     <div>
@@ -23,6 +17,7 @@ function TodoList() {
             key={todo.id}
             task={todo}
             onDelete={deleteTodo}
+            onToggle={toggleTodo}
           />
         ))}
       </ul>

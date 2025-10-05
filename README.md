@@ -29,8 +29,11 @@ AddTodoForm.jsx  TodoItem.jsx  useTodos.js
 
 ## State colocation
 -useTodos зберігає глобальний стан завдань (todos, isLoading, error).
+
 -AddTodoForm має локальний стан task для введення тексту.
+
 -TodoItem отримує task через props і змінює стан через callback-и (onToggle, onDelete).
+
 -TodoList не має власного стану — лише передає дані та callback-и між компонентами.
 
 

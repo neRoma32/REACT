@@ -40,9 +40,15 @@ AddTodoForm.jsx  TodoItem.jsx  useTodos.js
 
 ## Acceptance Criteria
 -Додавання нового завдання через AddTodoForm.
+
 -Позначення завдання як виконаного (onToggle).
+
 -Виконані завдання відображаються перекресленими (className="completed").
+
 -Видалення завдань (onDelete).
+
 -Використано кастомний хук useTodos для запитів (GET, POST, PUT, DELETE).
+
 -App лише рендерить TodoList, без власного стану.
+
 -Дані передаються вниз через props і вгору через callback-и.

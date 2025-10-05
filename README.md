@@ -1,31 +1,5 @@
 ## Архітектура
-```
-                  App.jsx
-                     |
-                     |
-                  TodoList.jsx
-          _______________________________
-         /       |              \
-        /        |               \
-AddTodoForm.jsx  TodoItem.jsx  useTodos.js
-        |          |               |
-        |          |               |
- [task, setTask]  props: task,   [todos, isLoading,
-  onSubmit() →     onToggle(),    error, addTodo(),
-  onAddTodo()      onDelete()     deleteTodo(), toggleTodo()]
-        |          |               |
-        |          |               |     axios -> DummyJSON API
-        |          |               |             |
-        |          |               |   ┌────────────────────┐
-        |          |               |   │  GET /todos        │
-        |          |               |   │  POST /todos/add   │
-        |          |               |   │  PUT /todos/:id    │
-        |          |               |   │  DELETE /todos/:id │
-        |__________|_______________|   └────────────────────┘
-                     ↑
-                     |
-           data & callbacks via props
-```
+![Component Tree + Data Flow](src/assets/діаграма.png)
 
 ## State colocation
 -useTodos зберігає глобальний стан завдань (todos, isLoading, error).
